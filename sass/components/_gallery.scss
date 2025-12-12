@@ -1,0 +1,21 @@
+@use '../abstract/mixins' as mixins;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3rem;
+
+  @include mixins.respond(tab-port) {
+    row-gap: 3rem;
+  }
+
+  &__img {
+    max-width: 20%;
+    border-radius: 1rem;
+
+    @include mixins.respond(tab-port) {
+      max-width: 35%;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // prettier-ignore
+    @media screen and (max-width: 37.5em) {@content;}
+  }
+
+  @if $breakpoint == tab-port {
+    // prettier-ignore
+    @media screen and (max-width: 62em) {@content;}
+  }
+
+  @if $breakpoint == tab-land {
+    // prettier-ignore
+    @media screen and (max-width: 75em) {@content;}
+  }
+}

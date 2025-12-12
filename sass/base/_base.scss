@@ -1,0 +1,39 @@
+@use '../abstract/mixins' as mixins;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include mixins.respond(tab-land) {
+    font-size: 55%;
+  }
+
+  @include mixins.respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include mixins.respond(phone) {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  max-width: 99.38em;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  line-height: 0;
+}

@@ -1,0 +1,125 @@
+@use '../abstract/mixins' as mixins;
+
+.header {
+  min-height: 65vh;
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 40em 1fr;
+  grid-template-rows: 5rem auto;
+  justify-content: center;
+  row-gap: 3rem;
+
+  @include mixins.respond(tab-port) {
+    display: block;
+  }
+
+  &__logo-box,
+  &__left,
+  &__right {
+    background-repeat: no-repeat;
+    transition: background-position 0.7s ease;
+    will-change: background-position;
+  }
+
+  &__logo-box {
+    height: 5rem;
+    width: 13rem;
+
+    background-image: url(../../assets/logo.png);
+    background-position: 0% 5px;
+    background-size: 100%;
+
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-position-y: -37.8px;
+    }
+
+    @include mixins.respond(tab-port) {
+      &:hover {
+        background-position-y: -30px;
+      }
+    }
+  }
+
+  &__contents {
+    text-align: center;
+    align-self: center;
+    grid-row: 2/3;
+
+    @include mixins.respond(phone) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__left,
+  &__right {
+    background-position-y: center;
+    background-size: 197%;
+  }
+
+  &__left {
+    background-image: url(../../assets/desktop/hero-img-left.png);
+    background-position-x: 0%;
+
+    grid-row: 2/3;
+
+    &:hover {
+      background-position-x: 100%;
+    }
+
+    @include mixins.respond(tab-port) {
+      max-height: 45rem;
+      min-height: 45rem;
+      margin: 5rem 0;
+      background-image: url(../../assets/tablet/hero-img.png);
+      background-size: 120rem;
+      background-position-y: 0%;
+
+      &:hover {
+        background-position-x: initial;
+        background-position-y: 102%;
+      }
+    }
+  }
+
+  &__right {
+    background-image: url(../../assets/desktop/hero-img-right.png);
+    background-position-x: 100%;
+
+    grid-row: 2/3;
+    grid-column: 3/4;
+
+    &:hover {
+      background-position-x: -3%;
+    }
+
+    @include mixins.respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin: 3rem 0 5rem 0;
+  }
+
+  &__btn-box {
+    @include mixins.respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 2rem;
+
+      & > * {
+        margin: 0 !important;
+      }
+    }
+  }
+}

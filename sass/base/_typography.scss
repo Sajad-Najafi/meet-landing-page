@@ -1,0 +1,42 @@
+@use '../abstract/variables' as variables;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+
+body {
+  background-color: variables.$white;
+  font-family: variables.$font-stack;
+  font-weight: variables.$default-font-weight;
+  font-size: variables.$default-font-size;
+  color: variables.$gray;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.heading-primary {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 6.5rem;
+  font-weight: 700;
+  color: variables.$black;
+}
+
+.heading-primary__span {
+  background-image: linear-gradient(
+    to right,
+    variables.$dark-violet,
+    variables.$dark-cyan
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  color: variables.$black;
+  font-weight: 700;
+
+  &--white {
+    color: variables.$white;
+  }
+}

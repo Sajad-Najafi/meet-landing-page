@@ -1,0 +1,39 @@
+@use '../abstract/variables' as variables;
+
+.section-divider {
+  padding-top: 20rem;
+  padding-bottom: 6rem;
+  text-align: center;
+
+  &__number-container {
+    width: 6rem;
+    height: 6rem;
+    background-color: variables.$white;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid variables.$light-gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    &::after {
+      content: '';
+      display: table;
+      width: 2px;
+      height: 10rem;
+
+      position: absolute;
+      top: -10rem;
+      background-color: variables.$light-gray;
+    }
+  }
+}
+
+.section-gallery {
+  padding: 0 4rem 7rem 4rem;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/meet-icon.svg" type="image/x-icon" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Meet | Smart Meeting All In One Place</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo-box">&nbsp;</div>
+
+      <div class="header__left">&nbsp;</div>
+
+      <article class="header__contents">
+        <h1 class="header__heading heading-primary">
+          Group Chat for <span class="heading-primary__span">Everyone</span>
+        </h1>
+        <p class="header__description">
+          Meet makes it easy to connect with other strong face-to-face virtually
+          and collaborate across any devices
+        </p>
+        <div class="header__btn-box">
+          <a href="#" class="btn btn--cyan"
+            >Download <span class="btn--cyan__span">v1.3</span></a
+          >
+          <a href="#" class="btn btn--violet">What is it?</a>
+        </div>
+      </article>
+
+      <div class="header__right">&nbsp;</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Section Divider -->
+      <section class="section section-divider">
+        <p class="section-divider__number-container">
+          <span class="section-divider__number">01</span>
+        </p>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="section section-gallery">
+        <figure class="gallery">
+          <img
+            src="assets/desktop/image-woman-in-videocall.jpg"
+            alt="Woman in videocall"
+            class="gallery__img"
+          />
+          <img
+            src="assets/desktop/image-women-videochatting.jpg"
+            alt="Women vidoechatting"
+            class="gallery__img"
+          />
+          <img
+            src="assets/desktop/image-man-texting.jpg"
+            alt="Man texting"
+            class="gallery__img"
+          />
+          <img
+            src="assets/desktop/image-men-in-meeting.jpg"
+            alt="Men in meeting"
+            class="gallery__img"
+          />
+        </figure>
+      </section>
+
+      <!-- Text Section -->
+      <section class="section-text">
+        <article class="text-box">
+          <p class="text-box__main-heading">Built for modern use</p>
+          <h2 class="text-box__sub-heading heading-secondary">
+            Smarter meeting, all in one place
+          </h2>
+          <p>
+            Send massages, share files, show your screen, and record your
+            meetings - all in one workspace. Control who can join with
+            invite-only team access, data encryption, and data export.
+          </p>
+        </article>
+      </section>
+
+      <!-- Section Divider -->
+      <section class="section section-divider">
+        <p class="section-divider__number-container">
+          <span class="section-divider__number">02</span>
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Main Content -->
+      <article class="footer__contents">
+        <h2 class="footer__heading heading-secondary heading-secondary--white">
+          Experience more together
+        </h2>
+        <p class="footer__text">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <a href="#" class="btn btn--violet btn--violet--white"
+          >Download <span class="btn--violet__span">v1.3</span></a
+        >
+      </article>
+
+      <!-- Copyright -->
+      <article class="footer__copyright">
+        <p>&copy; <span id="year"></span> Meet, Inc.</p>
+        <p>Developed by: <strong>Sajad Najafi</strong></p>
+      </article>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
